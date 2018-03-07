@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <script>
+            var count = 1;
+            let divPrincial = document.getElementById("divPrincipal");
+            var br = document.createElement("br");
+            
+            function addParametro() {
+                let input = document.createElement("input");
+                input.setAttribute("type", "text");
+                input.setAttribute("required", "true");
+                input.setAttribute("name", "parametro" + count);
+                input.setAttribute("placeholder", count + "º Parametro");
+                
+                divPrincipal.appendChild(input);
+                divPrincipal.appendChild(br);
+                count++;
+            }
+    
+        </script>
+    </head>
+    <body>
+        <br/><br/>
+        <h2>Cadastro de Parametros</h2>
+        <button onclick="addParametro()">Adicionar Parametro</button>
+        <form action="servlet" method="POST">
+            <div id="divPrincipal">
+                
+            </div>
+            <br/>
+            <input type="submit">
+        </form>
+    </body>
+</html>
